@@ -199,11 +199,23 @@ export const Room = ({
         }
     }, [localVideoRef])
 
-    return <div>
+    return <div className="bg-blue-800">
         Hi {name}
-        <video autoPlay width={400} height={400} ref={localVideoRef} />
-        {lobby ? "Waiting to connect you to someone" : null}
-        <video autoPlay width={400} height={400} ref={remoteVideoRef} />
+        <video
+  autoPlay
+  width={500}
+  height={500}
+  ref={localVideoRef}
+  className="video-fade"
+/>
+{lobby ? "Waiting to connect you to someone" : null}
+<video
+  autoPlay
+  width={500}
+  height={500}
+  ref={remoteVideoRef}
+  className="video-fade"
+/>
+
     </div>
 }
-
